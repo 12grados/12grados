@@ -3,136 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>12grados Producciones | Experiencias de Alto Impacto</title>
+<title>12grados Producciones | Eventos Premium</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-:root {
-    --bg-black: #080808;
-    --accent-blue: #00d4ff;
-    --accent-purple: #b788ff;
-    --text-white: #ffffff;
-    --text-gray: #aaaaaa;
-}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  
+  :root {
+    --accent: #00cfff;
+    --dark-bg: #050505;
+  }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-body, html{
-    width:100%;height:100%;font-family:'Inter',sans-serif;
-    background-color: var(--bg-black); color: var(--text-white);
-}
-
-/* Hero */
-.hero{
-    position: relative;
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    overflow:hidden;
-}
-.hero::before{
-    content:"";
-    position:absolute;top:0;left:0;width:100%;height:100%;
-    background: radial-gradient(circle at 50% 50%, rgba(0,212,255,0.05) 0%, rgba(0,0,0,0) 70%);
-    animation: moveBg 30s linear infinite;
-    z-index:1;
-}
-@keyframes moveBg{from{background-position:0 0;}to{background-position:1000px 1000px;}}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:900px;
-    padding:20px;
-}
-.logo{
-    width:250px;
-    filter: drop-shadow(0 0 20px rgba(0,212,255,0.3));
-    animation: fadeInDown 1.2s ease forwards;
-}
-h1{
-    font-size:clamp(2.5rem,8vw,4rem);
-    font-weight:900;
-    letter-spacing:-1px;
-    line-height:1.1;
-    margin:20px 0;
-    animation: fadeInUp 1s ease forwards;
-}
-.highlight{
-    background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-p{
-    font-size:1.2rem;
-    color:var(--text-gray);
-    margin-bottom:40px;
-    letter-spacing:1px;
-    animation: fadeInUp 1.4s ease forwards;
-}
-.cta-button{
-    display:inline-block;
-    padding:18px 45px;
-    border:1px solid var(--accent-blue);
-    color:var(--accent-blue);
-    text-decoration:none;
-    font-weight:700;
-    font-size:0.9rem;
-    text-transform:uppercase;
-    border-radius:50px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation: fadeInUp 1.6s ease forwards;
-}
-.cta-button:hover{
-    background: var(--accent-blue);
-    color:#000;
-    box-shadow:0 0 40px rgba(0,212,255,0.5);
-    transform: translateY(-5px);
-}
-
-/* Footer */
-footer{
-    background:#000;
+  body{
+    font-family:'Inter', sans-serif;
+    background: var(--dark-bg);
     color:#fff;
-    text-align:center;
-    padding:2em 1em;
-    font-size:0.9em;
-}
-footer a{
-    color: var(--accent-blue);
-    text-decoration:none;
-    margin:0 0.5em;
-    transition:color 0.3s ease;
-}
-footer a:hover{color:var(--accent-purple);}
+    line-height:1.6;
+    overflow-x: hidden;
+  }
 
-/* Animaciones */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeInDown{from{opacity:0;transform:translateY(-30px);}to{opacity:1;transform:translateY(0);}}
+  /* Header Minimalista */
+  header{
+    position: fixed; top:0; width:100%; padding:1.5em 3em; 
+    display:flex; justify-content:space-between; align-items:center;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px); /* Efecto cristal */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  header img{ height:50px; filter: drop-shadow(0 0 8px var(--accent)); }
+  header nav a{
+    color:#fff; text-decoration:none; font-size: 0.85rem;
+    font-weight:700; text-transform: uppercase; letter-spacing: 2px;
+    transition: 0.3s; opacity: 0.7;
+  }
+  header nav a:hover{ opacity: 1; color: var(--accent); }
 
-@media(max-width:768px){
-    .logo{width:180px;}
-}
+  /* Banner Principal estilo Cinematic */
+  .banner{
+    height:100vh;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+    background: radial-gradient(circle at center, #0a1a20 0%, #050505 100%);
+    position: relative;
+  }
+
+  /* Glow ambiental detrás del logo */
+  .banner::after {
+    content: ""; position: absolute; width: 400px; height: 400px;
+    background: var(--accent); opacity: 0.07; filter: blur(100px);
+    z-index: 1;
+  }
+
+  .banner-content{ position:relative; z-index:10; }
+  
+  .banner img{ 
+    height:180px; margin-bottom: 2em; 
+    filter: drop-shadow(0 0 25px rgba(0, 207, 255, 0.4));
+    animation: float 4s ease-in-out infinite;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+    font-weight: 900; letter-spacing: -2px;
+    text-transform: uppercase; margin-bottom: 0.5em;
+  }
+
+  .btn-contact{
+    display:inline-block; margin-top: 2em;
+    padding: 1.2em 3em; border-radius: 50px;
+    background: transparent; color: var(--accent);
+    border: 1px solid var(--accent);
+    font-weight: 700; text-decoration: none; text-transform: uppercase;
+    letter-spacing: 2px; font-size: 0.8rem;
+    transition: all 0.4s ease;
+  }
+
+  .btn-contact:hover{
+    background: var(--accent); color: #000;
+    box-shadow: 0 0 30px rgba(0, 207, 255, 0.6);
+    transform: translateY(-5px);
+  }
+
+  /* Footer */
+  footer{ 
+    background:#050505; padding:4em 1em; text-align:center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  footer p { color: #555; font-size: 0.8rem; letter-spacing: 1px; }
+  footer a{ color: var(--accent); text-decoration:none; font-weight: 600; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @media(max-width:768px){
+    header{ padding: 1em 1.5em; }
+    .banner img{ height:130px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- Hero -->
-<section class="hero">
-    <div class="hero-content">
-        <img src="logo.png" alt="12grados Logo" class="logo">
-        <h1>Diseñamos el <span class="highlight">Futuro</span></h1>
-        <p>Productora de eventos de alto impacto en Santiago.<br>Creatividad técnica y ejecución impecable.</p>
-        <a href="mailto:contacto@12grados.cl" class="cta-button">Cotizar Proyecto</a>
-    </div>
+<header>
+  <img src="logo/logo.png" alt="12grados Logo">
+  <nav>
+    <a href="mailto:contacto@12grados.cl">Escríbenos</a>
+  </nav>
+</header>
+
+<section class="banner">
+  <div class="banner-content">
+    <img src="logo/logo.png" alt="12grados Logo">
+    <h1>EXPERIENCIAS <br> <span style="color:var(--accent)">12 GRADOS</span></h1>
+    <a href="mailto:contacto@12grados.cl" class="btn-contact">Cotizar Evento</a>
+  </div>
 </section>
 
-<!-- Footer -->
 <footer>
-    <p>© 2026 12grados | Contacto: <a href="mailto:contacto@12grados.cl">contacto@12grados.cl</a></p>
-    <p>Síguenos: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+  <p>© 2026 12GRADOS PRODUCCIONES SPA</p>
+  <p style="margin-top:10px;">SANTIAGO, CHILE | <a href="mailto:contacto@12grados.cl">CONTACTO@12GRADOS.CL</a></p>
 </footer>
 
 </body>
