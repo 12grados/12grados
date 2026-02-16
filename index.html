@@ -1,139 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12grados Producciones | Eventos de Alto Impacto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --blue: #00cfff;
-            --dark: #050505;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            background-color: var(--dark);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12grados Producciones</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Montserrat',sans-serif;background:#000;color:#fff;line-height:1.6;}
 
-        /* Fondo con efecto de luz */
-        .glow {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100vw;
-            height: 100vh;
-            background: radial-gradient(circle, rgba(0, 207, 255, 0.05) 0%, rgba(0,0,0,0) 70%);
-            z-index: -1;
-        }
+  /* Header */
+  header{
+    position: fixed;top:0;width:100%;padding:1em 2em;display:flex;justify-content:space-between;align-items:center;
+    background:#000;z-index:1000;
+  }
+  header img{height:80px;}
+  header nav a{
+    color:#fff;text-decoration:none;margin-left:1.5em;font-weight:600;transition:color 0.3s ease;
+  }
+  header nav a:hover{color:#00cfff;}
 
-        header {
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-        }
+  /* Banner */
+  .banner{
+    height:100vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    position: relative;
+    overflow:hidden;
+  }
+  .banner::before{
+    content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+    background: radial-gradient(circle, rgba(0,204,255,0.2) 1px, transparent 1px);
+    background-size: 40px 40px;animation: moveBg 20s linear infinite;
+  }
+  @keyframes moveBg{from{background-position:0 0;}to{background-position:800px 800px;}}
+  .banner-content{position:relative;z-index:2;}
+  .banner img{height:200px;margin-bottom:1.5em;}
+  .btn-contact{
+    display:inline-block;padding:0.8em 2em;border-radius:8px;background:#00cfff;color:#000;font-weight:600;text-decoration:none;
+    transition:transform 0.3s ease, background 0.3s ease;
+  }
+  .btn-contact:hover{transform:scale(1.05);background:#00b4e0;}
 
-        .hero {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
+  /* Footer */
+  footer{background:#000;color:#fff;text-align:center;padding:2em 1em;font-size:0.9em;}
+  footer a{color:#00cfff;text-decoration:none;margin:0 0.5em;transition:color 0.2s ease;}
+  footer a:hover{color:#fff;}
 
-        /* RUTA ACTUALIZADA A 12grados/logo.png */
-        .logo-main {
-            width: 200px;
-            margin-bottom: 2.5rem;
-            filter: drop-shadow(0 0 20px rgba(0, 207, 255, 0.4));
-            animation: fadeIn 1.5s ease;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 10vw, 4.5rem);
-            font-weight: 900;
-            letter-spacing: -3px;
-            text-transform: uppercase;
-            line-height: 0.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .blue-text {
-            color: var(--blue);
-            text-shadow: 0 0 20px rgba(0, 207, 255, 0.3);
-        }
-
-        p {
-            color: #777;
-            max-width: 500px;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-
-        .btn-premium {
-            text-decoration: none;
-            color: var(--blue);
-            border: 1px solid var(--blue);
-            padding: 1.2rem 3rem;
-            border-radius: 100px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            transition: all 0.4s ease;
-        }
-
-        .btn-premium:hover {
-            background: var(--blue);
-            color: black;
-            box-shadow: 0 0 30px rgba(0, 207, 255, 0.5);
-            transform: translateY(-3px);
-        }
-
-        footer {
-            padding: 2rem;
-            text-align: center;
-            font-size: 0.7rem;
-            color: #333;
-            letter-spacing: 1px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  @media(max-width:768px){
+    .banner img{height:160px;}
+  }
+</style>
 </head>
 <body>
 
-    <div class="glow"></div>
+<header>
+  <img src="logo.png" alt="12grados Logo">
+  <nav>
+    <a href="mailto:contacto@12grados.cl">Contacto</a>
+  </nav>
+</header>
 
-    <header>
-        <img src="12grados/logo.png" alt="12grados" style="height: 40px; opacity: 0.8;">
-    </header>
+<section class="banner">
+  <div class="banner-content">
+    <img src="logo.png" alt="12grados Logo">
+    <a href="mailto:contacto@12grados.cl" class="btn-contact">¡Cotiza tu evento!</a>
+  </div>
+</section>
 
-    <main class="hero">
-        <img src="12grados/logo.png" alt="12grados Logo" class="logo-main">
-        
-        <h1>CREAMOS EL <br><span class="blue-text">IMPACTO</span></h1>
-        
-        <p>Productora boutique de eventos corporativos y experiencias tecnológicas en Santiago.</p>
-        
-        <a href="mailto:contacto@12grados.cl" class="btn-premium">Cotizar Proyecto</a>
-    </main>
-
-    <footer>
-        © 2026 12GRADOS PRODUCCIONES SPA | CONTACTO@12GRADOS.CL
-    </footer>
+<footer>
+  <p>© 2026 12grados | Contacto: <a href="mailto:contacto@12grados.cl">contacto@12grados.cl</a></p>
+  <p>Síguenos: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+</footer>
 
 </body>
 </html>
