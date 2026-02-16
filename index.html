@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>12grados.cl</title>
+<title>12grados Producciones</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
@@ -13,7 +13,7 @@
   /* Hero / Banner */
   .hero {
     height: 100vh;
-    background: linear-gradient(rgba(13,71,161,0.8), rgba(165,214,167,0.8)), url('https://source.unsplash.com/1600x900/?technology,office') center/cover no-repeat;
+    background: linear-gradient(rgba(13,71,161,0.7), rgba(165,214,167,0.6)), url('https://source.unsplash.com/1600x900/?concert,lights') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,7 @@
   .hero a {
     text-decoration: none;
     padding: 0.8rem 2rem;
-    background: #A5D6A7;
+    background: #FFD700;
     color: #0D47A1;
     font-weight: bold;
     border-radius: 30px;
@@ -36,25 +36,32 @@
   }
   .hero a:hover {
     background: #0D47A1;
-    color: #A5D6A7;
+    color: #FFD700;
     transform: scale(1.05);
   }
 
   /* Secciones */
   section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
   h2 { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #0D47A1; margin-bottom: 20px; text-align:center; }
+
+  /* Servicios / Cards */
   .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
   .card {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    width: 250px;
+    width: 280px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
   .card img { width: 80px; margin-bottom: 15px; }
+
+  /* Galería */
+  .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
+  .gallery img { width: 300px; height: 200px; object-fit: cover; border-radius: 10px; transition: transform 0.3s ease; }
+  .gallery img:hover { transform: scale(1.05); }
 
   /* Footer */
   footer {
@@ -63,11 +70,12 @@
     text-align: center;
     padding: 30px 20px;
   }
-  footer a { color: #A5D6A7; text-decoration: none; margin:0 10px; }
+  footer a { color: #FFD700; text-decoration: none; margin:0 10px; }
   footer a:hover { text-decoration: underline; }
 
   @media(max-width:768px){
     .cards { flex-direction: column; align-items: center; }
+    .gallery img { width: 90%; height: auto; }
   }
 </style>
 </head>
@@ -75,15 +83,15 @@
 
 <!-- Hero / Banner -->
 <div class="hero">
-  <h1>Bienvenido a 12grados</h1>
-  <p>Innovación, proyectos y soluciones digitales</p>
-  <a href="mailto:contacto@12grados.cl">Contáctanos</a>
+  <h1>12grados Producciones</h1>
+  <p>Transformamos tus eventos en experiencias inolvidables</p>
+  <a href="mailto:contacto@12grados.cl">Cotiza tu evento</a>
 </div>
 
 <!-- Sección Nosotros -->
 <section>
   <h2>Nosotros</h2>
-  <p>En 12grados.cl nos dedicamos a desarrollar proyectos digitales modernos y eficientes. Creamos experiencias web, plataformas de contacto y soluciones tecnológicas personalizadas.</p>
+  <p>12grados Producciones es una productora integral de eventos. Más de 10 años de experiencia llevando shows, conciertos y eventos corporativos a otro nivel, combinando sonido, iluminación, escenario y creatividad.</p>
 </section>
 
 <!-- Sección Servicios -->
@@ -91,20 +99,36 @@
   <h2>Servicios</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://img.icons8.com/color/96/000000/web.png"/>
-      <h3>Desarrollo Web</h3>
-      <p>Creación de sitios modernos, rápidos y adaptables a todos los dispositivos.</p>
+      <img src="https://img.icons8.com/color/96/000000/speaker.png"/>
+      <h3>Sonido Profesional</h3>
+      <p>Equipos de alta calidad para conciertos, lanzamientos y eventos privados.</p>
     </div>
     <div class="card">
-      <img src="https://img.icons8.com/color/96/000000/cloud.png"/>
-      <h3>Soluciones Digitales</h3>
-      <p>Plataformas personalizadas y herramientas digitales a medida.</p>
+      <img src="https://img.icons8.com/color/96/000000/stage.png"/>
+      <h3>Escenarios</h3>
+      <p>Diseño, montaje y logística de escenarios a medida para tu evento.</p>
     </div>
     <div class="card">
-      <img src="https://img.icons8.com/color/96/000000/customer-support.png"/>
-      <h3>Contacto Profesional</h3>
-      <p>Correo corporativo y atención directa para tus consultas y proyectos.</p>
+      <img src="https://img.icons8.com/color/96/000000/video-conference.png"/>
+      <h3>Streaming y Grabación</h3>
+      <p>Transmisión en vivo y registro audiovisual de alta calidad.</p>
     </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/event.png"/>
+      <h3>Eventos Corporativos</h3>
+      <p>Organización completa de lanzamientos, seminarios y celebraciones.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Galería -->
+<section>
+  <h2>Galería de Eventos</h2>
+  <div class="gallery">
+    <img src="https://source.unsplash.com/300x200/?concert,lights">
+    <img src="https://source.unsplash.com/300x200/?stage,performance">
+    <img src="https://source.unsplash.com/300x200/?party,celebration">
+    <img src="https://source.unsplash.com/300x200/?dj,music">
   </div>
 </section>
 
