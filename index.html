@@ -11,7 +11,7 @@
     --accent-blue: #00d4ff;
     --accent-purple: #b788ff;
     --text-white: #ffffff;
-    --text-gray: #888888;
+    --text-gray: #aaaaaa;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -24,7 +24,7 @@ body, html{
 .hero{
     position: relative;
     width:100%;
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -35,8 +35,8 @@ body, html{
 .hero::before{
     content:"";
     position:absolute;top:0;left:0;width:100%;height:100%;
-    background: radial-gradient(circle at 50% 50%, rgba(0,212,255,0.06) 0%, rgba(0,0,0,0) 70%);
-    animation: moveBg 25s linear infinite;
+    background: radial-gradient(circle at 50% 50%, rgba(0,212,255,0.05) 0%, rgba(0,0,0,0) 70%);
+    animation: moveBg 30s linear infinite;
     z-index:1;
 }
 @keyframes moveBg{from{background-position:0 0;}to{background-position:1000px 1000px;}}
@@ -48,7 +48,7 @@ body, html{
     padding:20px;
 }
 .logo{
-    width:180px;
+    width:200px;
     filter: drop-shadow(0 0 20px rgba(0,212,255,0.3));
     animation: fadeInDown 1.2s ease forwards;
 }
@@ -56,7 +56,7 @@ h1{
     font-size:clamp(2.5rem,8vw,4rem);
     font-weight:900;
     letter-spacing:-1px;
-    line-height:1;
+    line-height:1.1;
     margin:20px 0;
     animation: fadeInUp 1s ease forwards;
 }
@@ -150,7 +150,7 @@ footer a:hover{color:var(--accent-purple);}
 <!-- Hero -->
 <section class="hero">
     <div class="hero-content">
-        <img src="logo/logo.png" alt="12grados Logo" class="logo">
+        <img src="logo.png" alt="12grados Logo" class="logo">
         <h1>Diseñamos el <span class="highlight">Futuro</span></h1>
         <p>Productora de eventos de alto impacto en Santiago.<br>Creatividad técnica y ejecución impecable.</p>
         <a href="mailto:contacto@12grados.cl" class="cta-button">Cotizar Proyecto</a>
