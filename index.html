@@ -1,29 +1,118 @@
-12grados<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <title>12 Grados Producciones</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { margin:0; font-family:Arial; background:#000; color:white; text-align:center; }
-    h1 { font-size:60px; margin-top:100px; letter-spacing:3px; }
-    p { font-size:20px; margin-top:20px; color:#ccc; }
-    .btn { margin-top:40px; padding:15px 40px; background:#e10600; color:white; text-decoration:none; border-radius:5px; }
-    .section { margin-top:120px; padding:40px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12grados.cl</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
+
+  body { background-color: #f5f5f5; color: #333; line-height:1.6; }
+
+  /* Hero / Banner */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(13,71,161,0.8), rgba(165,214,167,0.8)), url('https://source.unsplash.com/1600x900/?technology,office') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+  }
+  .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 0.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+  .hero p { font-size: 1.5rem; margin-bottom: 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+  .hero a {
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    background: #A5D6A7;
+    color: #0D47A1;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .hero a:hover {
+    background: #0D47A1;
+    color: #A5D6A7;
+    transform: scale(1.05);
+  }
+
+  /* Secciones */
+  section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+  h2 { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #0D47A1; margin-bottom: 20px; text-align:center; }
+  .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+  .card img { width: 80px; margin-bottom: 15px; }
+
+  /* Footer */
+  footer {
+    background: #0D47A1;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  footer a { color: #A5D6A7; text-decoration: none; margin:0 10px; }
+  footer a:hover { text-decoration: underline; }
+
+  @media(max-width:768px){
+    .cards { flex-direction: column; align-items: center; }
+  }
+</style>
 </head>
 <body>
-  <h1>12 GRADOS</h1>
-  <p>Elevamos la temperatura del escenario.</p>
-  <a href="#" class="btn">Cotizar Evento</a>
 
-  <div class="section">
-    <h2>Producción Integral</h2>
-    <p>Audio, iluminación, escenarios y shows en vivo.</p>
-  </div>
+<!-- Hero / Banner -->
+<div class="hero">
+  <h1>Bienvenido a 12grados</h1>
+  <p>Innovación, proyectos y soluciones digitales</p>
+  <a href="mailto:contacto@12grados.cl">Contáctanos</a>
+</div>
 
-  <div class="section">
-    <h2>Eventos Corporativos</h2>
-    <p>Experiencias técnicas y artísticas de alto nivel.</p>
+<!-- Sección Nosotros -->
+<section>
+  <h2>Nosotros</h2>
+  <p>En 12grados.cl nos dedicamos a desarrollar proyectos digitales modernos y eficientes. Creamos experiencias web, plataformas de contacto y soluciones tecnológicas personalizadas.</p>
+</section>
+
+<!-- Sección Servicios -->
+<section>
+  <h2>Servicios</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/web.png"/>
+      <h3>Desarrollo Web</h3>
+      <p>Creación de sitios modernos, rápidos y adaptables a todos los dispositivos.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/cloud.png"/>
+      <h3>Soluciones Digitales</h3>
+      <p>Plataformas personalizadas y herramientas digitales a medida.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/customer-support.png"/>
+      <h3>Contacto Profesional</h3>
+      <p>Correo corporativo y atención directa para tus consultas y proyectos.</p>
+    </div>
   </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Correo: <a href="mailto:contacto@12grados.cl">contacto@12grados.cl</a> | Redes: 
+  <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+</footer>
+
 </body>
 </html>
